@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1B1836;
+}
+
+
+/* SECCION DE ENCABEZADO */
+
+header {
+    margin: auto;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    transition: 0.6s;
+    z-index: 10000;
+    padding: 10px;
+}
+
+.sticky {
+    padding: 20px;
+    background: #1B1836;
+}
+
+#btn_menu {
+    display: none;
+}
+
+.nav label:hover {
+    cursor: pointer;
+}
+
+header label {
+    display: none;
+    width: 20%;
+}
+
+header label:hover {
+    cursor: pointer;
+}
+
+.Menu img {
+    position: relative;
+    float: left;
+    width: 40px;
+    transition: 0.6s;
+}
+
+.Menu {
+    width: 100%;
+    display: flex;
+}
+
+.Menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.Menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-weight: bold;
+}
+
+.Menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+}
+
+.Menu>li {
+    float: left;
+}
+
+.Menu li ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.Menu li:hover>ul {
+    display: block;
+}
+
+.sticky .Logo img {
+    float: left;
+    width: 4%;
+    transition: 0.6s;
+}
+
+.sticky ul li a {
+    color: #fff;
+    text-shadow: 2px 2px 2px #1B1836;
+    font-weight: bold;
+}
+
+.Menu .cinco {
+    background-color: rgba(254, 254, 255, 0.692);
+    color: #1B1836;
+    text-shadow: none;
+    border-radius: 2px;
+}
+
+
+/* Menu al reducir la pantalla a 700px o menos  */
+
+@media (max-width:700px) {
+    header label {
+        display: block;
+        border-radius: 10px;
+    }
+    .Menu {
+        position: absolute;
+        background: #1B1836;
+        width: 100%;
+        height: 100vh;
+        top: 100%;
+        left: 0%;
+        margin-left: -900px;
+        transition: 0.5s;
+    }
+    .Menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 40px;
+    }
+    .Menu img {
+        display: none;
+    }
+    .Menu li a:hover {
+        background: transparent;
+        color: yellow;
+    }
+    .Menu .cinco:hover {
+        background-color: rgba(32, 13, 77, 0.5);
+    }
+    #btn_menu:checked~.Menu {
+        margin: 0;
+    }
+}
+
+
+/* FIN DE LA SECCION DE ENCABEZADO */
+
+
+/*SECCION PRESENTACION */
+
+.rpa_cont_sec_1 {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.rpa_cont_sec_1 .contenido_1 {
+    display: block;
+    color: #fff;
+    height: 100vh;
+    float: left;
+    margin: auto;
+    padding: 10% 0;
+}
+
+.rpa_cont_sec_1 .contenido_1 .titulo_1 {
+    /* texto: Quienes somos */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.rpa_cont_sec_1 .contenido_1 h2 {
+    /*Texto: Real Peninusla */
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.25em;
+    padding: 0 0 10% 0;
+}
+
+.rpa_cont_sec_1 .contenido_1 p {
+    /* Texto: contenido descriptivo */
+    font-size: 16px;
+    padding-right: 1em;
+}
+
+.rpa_cont_sec_1 .contenido_2 {
+    display: block;
+    width: 50%;
+    float: right;
+    padding: 20% 0;
+}
+
+@media (max-width:800px) {
+    .rpa_cont_sec_1 .contenido_2 {
+        display: flex;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    .rpa_cont_sec_1 .contenido_2 iframe {
+        width: 100%;
+        text-align: center;
+    }
+    .rpa_cont_sec_1 .contenido_1 {
+        height: auto;
+    }
+}
+
+
+/* FIN DE PRESENTACION */
+
+
+/* SECCION DE VENTAS [color de letra]*/
+
+.cont_ventas {
+    color: #fff;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    padding: 10% 0;
+    text-align: center;
+}
+
+.cont_ventas .vent {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.cont_ventas .vent h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    letter-spacing: 0.25em;
+    padding: 0;
+}
+
+.cont_ventas .vent img {
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+
+.cont_ventas .vent a {
+    position: absolute;
+    width: 40%;
+    height: 30px;
+    background: #f00;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+
+/* FIN DE SECCION DE VENTAS*/
+
+
+/* * SECCION DE SERVICIOS [color de letra]*/
+
+.cont_servicios {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.cont_servicios .contenido_1 {
+    display: block;
+    color: #fff;
+    height: 100vh;
+    float: left;
+    padding: 10% 0;
+    margin: auto;
+}
+
+.cont_servicios .titulo_1 {
+    /* Texto: Servicios */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.cont_servicios .contenido_1 h2 {
+    /* Texto: Gestoria Inmobiliaria */
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.25em;
+    padding: 0 0 5% 0;
+}
+
+.cont_servicios .contenido_1 p {
+    /*Texto: contenido descriptivo */
+    font-size: 16px;
+}
+
+.cont_servicios .contenido_1 h3 {
+    font-size: 17px;
+    padding: 8px 0px;
+    font-weight: bold;
+}
+
+.cont_servicios .contenido_1 a {
+    width: 70%;
+    text-decoration: none;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    color: #1B1836;
+    margin-right: 20px;
+}
+
+.cont_servicios .contenido_2 {
+    display: block;
+    width: 50%;
+    height: 100vh;
+    float: right;
+    padding: 10% 0;
+}
+
+.cont_servicios .contenido_2 img {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+@media (max-width:900px) {
+    .cont_servicios .contenido_2 {
+        display: none;
+    }
+    .cont_servicios .contenido_1 {
+        height: auto;
+    }
+}
+
+
+/* FIN DE SECCION DE SERVICIOS*/
+
+
+/* SECCION DE MARKETING */
+
+.cont_marketing {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.cont_marketing .contenido_1 {
+    display: block;
+    color: #fff;
+    height: 85vh;
+    float: right;
+    margin: auto;
+    padding: 10% 0;
+}
+
+.cont_marketing .titulo_1 {
+    /* Texto: Servicios */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.cont_marketing .contenido_1 h2 {
+    /* Texto: Gestoria Inmobiliaria */
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.25em;
+}
+
+.cont_marketing .contenido_1 p {
+    /*Texto: contenido descriptivo */
+    font-size: 16px;
+}
+
+.cont_marketing .contenido_1 h3 {
+    font-size: 20px;
+    padding: 12px 0px;
+    font-weight: bold;
+}
+
+.cont_marketing .contenido_1 a {
+    width: 70%;
+    text-decoration: none;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    color: #1B1836;
+}
+
+.cont_marketing .contenido_2 {
+    display: block;
+    width: 50%;
+    height: 85vh;
+    float: left;
+    padding: 10% 0;
+}
+
+.cont_marketing .contenido_2 img {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+@media (max-width:900px) {
+    .cont_marketing .contenido_2 {
+        display: none;
+    }
+    .cont_marketing .contenido_1 {
+        height: auto;
+    }
+}
+
+
+/* FIN DE SECCION DE MARKETING */
+
+
+/* SECCION DE MAPS */
+
+.maps {
+    margin: auto;
+    width: 100%;
+    height: 120vh;
+    position: relative;
+    padding: 10% 0;
+}
+
+.maps h1 {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.maps .contenido_2 .titulo_1 {
+    width: 100%;
+    height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.maps .contenido_1 {
+    width: 60%;
+    display: block;
+    margin: auto;
+    float: right;
+}
+
+.maps .contenido_1 iframe {
+    display: inline;
+    margin: auto;
+    margin-left: 100px;
+    float: right;
+    padding: 0;
+}
+
+.maps .contenido_2 {
+    width: 40%;
+    display: block;
+    float: left;
+    margin: auto;
+}
+
+.maps .contenido_2 iframe {
+    display: inline-flex;
+    width: 100%;
+    float: left;
+    padding: 5% 0;
+}
+
+.maps .contenido_3 {
+    display: none;
+}
+
+.maps .contenido_4 {
+    display: none;
+}
+
+@media (max-width:800px) {
+    .maps {
+        margin: auto;
+        width: 100%;
+        height: 130vh;
+        position: relative;
+        padding: 10% 0;
+    }
+    .maps h1 {
+        display: flex;
+        width: 100%;
+        height: 20px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #f00;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    .maps .contenido_1 {
+        display: none;
+    }
+    .maps .contenido_2 {
+        display: none;
+    }
+    .maps .contenido_3 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0 0 10% 0;
+    }
+    .maps .contenido_3 iframe {
+        position: relative;
+        width: auto;
+        text-align: center;
+    }
+    .maps .contenido_4 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+
+/* FIN DE SECCION DE MAPS */
+
+
+/* CONTACTO */
+
+.cont_contacto {
+    color: #fff;
+}
+
+
+/* BANNER FINAL*/
+
+.rpa_cont_footer {
+    width: 100%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(39, 39, 43, 0.9);
+    padding: 2% 0;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.rpa_cont_footer div {
+    padding: 10px 0px;
+}
+
+.container .final {
+    width: 98%;
+    height: auto;
+}
+
+.container .final h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.container .final hr {
+    width: 100%;
+}

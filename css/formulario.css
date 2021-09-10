@@ -1,0 +1,144 @@
+.form {
+    position: flex;
+    width: auto;
+    height: 50vh;
+    text-align: center;
+    padding: 10% 0;
+}
+
+#modal-open {
+    position: relative;
+    margin: auto;
+    transition: background 0.3s;
+}
+
+#modal-open {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background: #4586de;
+    padding: 3px;
+}
+
+#modal-open:hover {
+    background: #3e78c7;
+}
+
+.form h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #f00;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.form h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.25em;
+    color: #fff;
+}
+
+#contact-modal {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modal-content {
+    background: #efefef;
+    margin: 10% auto;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    animation-name: modalSlideUp;
+    animation-duration: 1ms;
+}
+
+#modal-header h2 {
+    background: #1B1836;
+    color: #fff;
+    padding: 10px 0 10px 10px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+#modal-header .close-modal {
+    font-size: 30px;
+    float: right;
+    margin-right: 20px;
+    color: #fff;
+}
+
+#modal-header .close-modal:hover {
+    color: #f00;
+    cursor: pointer;
+}
+
+#modal-footer h3 {
+    background: #1B1836;
+    color: #fff;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+#modal-body {
+    padding: 5px 10px;
+}
+
+.form-group {
+    width: 75%;
+    margin: 0;
+    margin-left: 12.5%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-group input,
+textarea {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type='submit'] {
+    margin: 2em;
+    font-size: 20px;
+    width: 100px;
+    padding: 5px 20px;
+    transition: background 0.3s;
+    background: #1B1836;
+    color: #fff;
+    border: none;
+}
+
+input[type='submit']:hover {
+    background: #3e78c7;
+}
+
+@keyframes modalSlideUp {
+    0% {
+        transform: translateY(500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

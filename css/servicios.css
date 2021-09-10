@@ -1,0 +1,233 @@
+    .Titulo {
+        text-align: center;
+        font-size: 40px;
+        color: #fff;
+        padding-top: 100px;
+        font-weight: 100;
+    }
+    
+    .container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    
+    .container .ventana-model {
+        width: 330px;
+        height: 350px;
+        margin: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .container .card {
+        width: 330px;
+        height: 280px;
+        overflow: hidden;
+        margin: 0;
+        text-align: center;
+        transition: all 0.25s;
+        background: #fff;
+    }
+    
+    .container .card {
+        border-color: #fff;
+    }
+    
+    .ventana-model.card img {
+        width: 330px;
+        height: 220px;
+    }
+    
+    .ventana-model .card h4 {
+        font-size: 20px;
+        font-weight: 300;
+        margin: auto;
+    }
+    
+    .container .card a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .container .texto {
+        width: 100%;
+        height: 200px;
+        margin: auto;
+    }
+    
+    .container .texto h4 {
+        padding: 10px 1rem;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+    }
+    /* POUPOP */
+    
+    .btn-open-modal {
+        width: 150px;
+        height: 30px;
+        position: absolute;
+        display: block;
+        padding: 10px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-left: 90px;
+    }
+    
+    .container-all {
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 600ms;
+        position: fixed;
+    }
+    
+    .container-all:target {
+        background: #00000088;
+        visibility: visible;
+        opacity: 1;
+        z-index: 10000;
+    }
+    
+    .container-all:target .popup {
+        top: 55%;
+        left: 50%;
+        transform: rotate(0deg) translate(-50%, -50%);
+        visibility: visible;
+    }
+    
+    .popup {
+        width: 100%;
+        max-width: 800px;
+        height: 500px;
+        position: fixed;
+        visibility: hidden;
+        top: -80%;
+        left: -80%;
+        transform: rotate(90deg) translate(-150%, 230%);
+        transition: all 600ms;
+        display: flex;
+        background: #fff;
+    }
+    
+    .img {
+        width: 40%;
+        background-image: url(../img/Servicios/Estimacion_valor.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img_2 {
+        width: 40%;
+        background-image: url(../img/Servicios/Asesoria_legal.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img_3 {
+        width: 40%;
+        background-image: url(../img/Servicios/Escritura_contratos.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img_4 {
+        width: 40%;
+        background-image: url(../img/Servicios/Cancelacion.jpeg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .container-text {
+        width: 60%;
+        padding: 20px 40px;
+        overflow-y: auto;
+    }
+    
+    .container-text h1 {
+        font-size: 30px;
+    }
+    
+    .container-text p {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    
+    .container-text img {
+        float: right;
+        padding: 90px 0 0 0;
+        width: 50px;
+        height: auto;
+        opacity: 0.5;
+    }
+    
+    .btn-close-modal {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        padding: 20px;
+        background: #000;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 10px;
+        text-decoration: none;
+    }
+    
+    @media screen and (max-width:800px) {
+        .popup {
+            flex-direction: column;
+            width: 80%;
+            height: 100%;
+            max-height: 500px;
+        }
+        .img {
+            width: 100%;
+            height: 40%;
+        }
+        .img_2 {
+            width: 100%;
+            height: 40%;
+        }
+        .img_3 {
+            width: 100%;
+            height: 40%;
+        }
+        .img_4 {
+            width: 100%;
+            height: 40%;
+        }
+        .container-text {
+            width: 100%;
+            height: 60%;
+            padding: 20px;
+        }
+        .container-text img {
+            padding-top: 0;
+        }
+        .container-all:target {
+            background: #00000088;
+            visibility: visible;
+            opacity: 1;
+            z-index: 10000;
+            height: 100%;
+            width: 100%;
+        }
+        .Titulo {
+            font-size: 30px;
+        }
+        .container .texto {
+            height: 100%;
+        }
+    }

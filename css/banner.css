@@ -1,0 +1,72 @@
+.rpa_cont {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(247, 247, 247, 0.589);
+    justify-content: space-between;
+}
+
+.rpa_sombra {
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2px;
+    text-align: center;
+    color: #000;
+    border-radius: 6px;
+    margin: auto;
+}
+
+.rpa_sombra hr {
+    border-top: 3px solid #1B1836;
+}
+
+.rpa_sombra h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.rpa_sombra_link {
+    position: relative;
+    padding: 20px 0 30px;
+}
+
+.rpa_sombra_link a {
+    font-size: 20px;
+    display: inline-block;
+    color: #1B1836;
+    text-decoration: none;
+    border: 1px solid none;
+    padding: 1px;
+    width: 150px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+.rpa_sombra_link a:hover {
+    background-color: rgba(255, 255, 255, 0.582);
+    color: #1B1836;
+    border-radius: 6px;
+}
+
+.titulo {
+    font-family: 'Dancing Script', cursive;
+    color: #1B1836;
+}
+
+@media (max-width:900px) {
+    .rpa_cont {
+        height: 130vh;
+    }
+    .rpa_sombra {
+        width: auto;
+        top: 60%;
+    }
+}
